@@ -1,0 +1,247 @@
+{
+    "Materials": {
+        "light": {
+            "TYPE": "Emitting",
+            "RGB": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "EMITTANCE": 7.0
+        },
+        "wall_white": {
+            "TYPE": "Diffuse",
+            "RGB": [
+                0.92,
+                0.92,
+                0.88
+            ]
+        },
+        "wall_yellow": {
+            "TYPE": "Diffuse",
+            "RGB": [
+                0.98,
+                0.95,
+                0.8
+            ]
+        },
+        "water": {
+            "TYPE": "Refractive",
+            "RGB": [
+                0.8,
+                0.9,
+                1.0
+            ],
+            "IOR": 1.333
+        },
+        "tile_spec": {
+            "TYPE": "Specular",
+            "RGB": [
+                0.9,
+                0.9,
+                0.9
+            ],
+            "ROUGHNESS": 0.05
+        }
+    },
+    "Camera": {
+        "RES": [
+            960,
+            540
+        ],
+        "FOVY": 55.0,
+        "ITERATIONS": 3000,
+        "DEPTH": 8,
+        "FILE": "poolrooms",
+        "EYE": [
+            0.0,
+            1.2,
+            5.5
+        ],
+        "LOOKAT": [
+            0.0,
+            0.8,
+            0.0
+        ],
+        "UP": [
+            0.0,
+            1.0,
+            0.0
+        ],
+        "LENSRADIUS": 0.03,
+        "FOCALDIST": 5.5
+    },
+    "Objects": [
+        {
+            "TYPE": "cube",
+            "MATERIAL": "light",
+            "TRANS": [
+                0.0,
+                3.0,
+                -2.5
+            ],
+            "ROTAT": [
+                0,
+                0,
+                0
+            ],
+            "SCALE": [
+                1.8,
+                0.05,
+                0.6
+            ]
+        },
+        {
+            "TYPE": "cube",
+            "MATERIAL": "light",
+            "TRANS": [
+                0.0,
+                3.0,
+                2.5
+            ],
+            "ROTAT": [
+                0,
+                0,
+                0
+            ],
+            "SCALE": [
+                1.8,
+                0.05,
+                0.6
+            ]
+        },
+        {
+            "TYPE": "cube",
+            "MATERIAL": "tile_spec",
+            "TRANS": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "ROTAT": [
+                0,
+                0,
+                0
+            ],
+            "SCALE": [
+                8.0,
+                0.05,
+                8.0
+            ]
+        },
+        {
+            "TYPE": "cube",
+            "MATERIAL": "wall_yellow",
+            "TRANS": [
+                0.0,
+                1.5,
+                -4.0
+            ],
+            "ROTAT": [
+                0,
+                0,
+                0
+            ],
+            "SCALE": [
+                8.0,
+                3.0,
+                0.05
+            ]
+        },
+        {
+            "TYPE": "cube",
+            "MATERIAL": "wall_white",
+            "TRANS": [
+                -4.0,
+                1.5,
+                0.0
+            ],
+            "ROTAT": [
+                0,
+                0,
+                0
+            ],
+            "SCALE": [
+                0.05,
+                3.0,
+                8.0
+            ]
+        },
+        {
+            "TYPE": "cube",
+            "MATERIAL": "wall_white",
+            "TRANS": [
+                4.0,
+                1.5,
+                0.0
+            ],
+            "ROTAT": [
+                0,
+                0,
+                0
+            ],
+            "SCALE": [
+                0.05,
+                3.0,
+                8.0
+            ]
+        },
+        {
+            "TYPE": "cube",
+            "MATERIAL": "wall_white",
+            "TRANS": [
+                0.0,
+                3.05,
+                0.0
+            ],
+            "ROTAT": [
+                0,
+                0,
+                0
+            ],
+            "SCALE": [
+                8.0,
+                0.05,
+                8.0
+            ]
+        },
+        {
+            "TYPE": "cube",
+            "MATERIAL": "water",
+            "TRANS": [
+                0.0,
+                0.3,
+                0.0
+            ],
+            "ROTAT": [
+                0,
+                0,
+                0
+            ],
+            "SCALE": [
+                3.5,
+                0.3,
+                7.0
+            ]
+        },
+        {
+            "TYPE": "cube",
+            "MATERIAL": "tile_spec",
+            "TRANS": [
+                0.0,
+                0.35,
+                0.0
+            ],
+            "ROTAT": [
+                0,
+                0,
+                0
+            ],
+            "SCALE": [
+                3.6,
+                0.04,
+                7.1
+            ]
+        }
+    ]
+}

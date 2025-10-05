@@ -5,7 +5,7 @@
         {
             "TYPE":"Emitting",
             "RGB":[1.0, 1.0, 1.0],
-            "EMITTANCE":5.0
+            "EMITTANCE":2.0
         },
         "diffuse_white":
         {
@@ -27,7 +27,8 @@
             "TYPE":"Specular",
             "RGB":[0.98, 0.98, 0.98],
             "ROUGHNESS":0.0
-        }
+        },
+        "glass": { "TYPE":"Refractive", "RGB":[1.0,1.0,1.0], "IOR": 1.5 }
     },
     "Camera":
     {
