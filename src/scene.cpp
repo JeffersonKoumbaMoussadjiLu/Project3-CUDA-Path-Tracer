@@ -14,6 +14,8 @@
 using namespace std;
 using json = nlohmann::json;
 
+
+// scene loading
 Scene::Scene(string filename)
 {
     cout << "Reading scene from " << filename << " ..." << endl;
@@ -31,25 +33,33 @@ Scene::Scene(string filename)
     }
 }
 
+// Load scene description from a JSON file
 void Scene::loadFromJSON(const std::string& jsonName)
 {
     std::ifstream f(jsonName);
     json data = json::parse(f);
     const auto& materialsData = data["Materials"];
     std::unordered_map<std::string, uint32_t> MatNameToID;
+
+	//load in materials
     for (const auto& item : materialsData.items())
     {
         const auto& name = item.key();
         const auto& p = item.value();
         Material newMaterial{};
-        // TODO: handle materials loading differently
-        if (p["TYPE"] == "Diffuse")
-        {
+        const std::string type = p["TYPE"];
+
+        const auto& col = p["RGB"];
+        newMaterial.color = glm::vec3(col[0], col[1], col[2]);
+
+		//default values
+        if (p["TYPE"] == "Diffuse") {
             const auto& col = p["RGB"];
             newMaterial.color = glm::vec3(col[0], col[1], col[2]);
         }
-        else if (p["TYPE"] == "Emitting")
-        {
+
+		//emissive materials
+        else if (p["TYPE"] == "Emitting") {
             const auto& col = p["RGB"];
             newMaterial.color = glm::vec3(col[0], col[1], col[2]);
             newMaterial.emittance = p["EMITTANCE"];
@@ -58,8 +68,20 @@ void Scene::loadFromJSON(const std::string& jsonName)
         {
             const auto& col = p["RGB"];
             newMaterial.color = glm::vec3(col[0], col[1], col[2]);
+            newMaterial.hasReflective = 1.f;          
+            if (p.contains("IOR")) {
+                newMaterial.indexOfRefraction = (float)p["IOR"];
+                newMaterial.hasRefractive = 1.f;
+            }
         }
-        MatNameToID[name] = materials.size();
+        else if (p["TYPE"] == "Refractive") {           
+            const auto& col = p["RGB"];
+            newMaterial.color = glm::vec3(col[0], col[1], col[2]);
+            newMaterial.hasRefractive = 1.0f;
+            newMaterial.indexOfRefraction = p.contains("IOR") ? (float)p["IOR"] : 1.5f;
+        }
+
+        MatNameToID[name] = (uint32_t)materials.size();
         materials.emplace_back(newMaterial);
     }
     const auto& objectsData = data["Objects"];
@@ -67,14 +89,9 @@ void Scene::loadFromJSON(const std::string& jsonName)
     {
         const auto& type = p["TYPE"];
         Geom newGeom;
-        if (type == "cube")
-        {
-            newGeom.type = CUBE;
-        }
-        else
-        {
-            newGeom.type = SPHERE;
-        }
+        if (type == "cube") newGeom.type = CUBE;
+        else                newGeom.type = SPHERE;
+
         newGeom.materialid = MatNameToID[p["MATERIAL"]];
         const auto& trans = p["TRANS"];
         const auto& rotat = p["ROTAT"];

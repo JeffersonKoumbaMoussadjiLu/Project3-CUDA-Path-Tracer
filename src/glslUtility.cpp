@@ -63,8 +63,6 @@ char* loadFile(const char *fname, GLint &fSize)
 }
 
 // printShaderInfoLog
-// From OpenGL Shading Language 3rd Edition, p215-216
-// Display (hopefully) useful error messages if shader fails to compile
 void printShaderInfoLog(GLint shader)
 {
     int infoLogLen = 0;
@@ -76,7 +74,6 @@ void printShaderInfoLog(GLint shader)
     if (infoLogLen > 1)
     {
         infoLog = new GLchar[infoLogLen];
-        // error check for fail to allocate memory omitted
         glGetShaderInfoLog(shader, infoLogLen, &charsWritten, infoLog);
         std::cout << "InfoLog:" << std::endl << infoLog << std::endl;
         delete [] infoLog;
@@ -94,7 +91,6 @@ void printLinkInfoLog(GLint prog)
     if (infoLogLen > 1)
     {
         infoLog = new GLchar[infoLogLen];
-        // error check for fail to allocate memory omitted
         glGetProgramInfoLog(prog, infoLogLen, &charsWritten, infoLog);
         std::cout << "InfoLog:" << std::endl << infoLog << std::endl;
         delete [] infoLog;
@@ -137,33 +133,6 @@ shaders_t loadDefaultShaders()
     return out;
 }
 
-shaders_t loadShaders(const char * vert_path, const char * frag_path, const char * geom_path = 0)
-{
-    shaders_t out;
-
-    // load shaders & get length of each
-    GLint vlen, flen, glen;
-    char *vertexSource, *fragmentSource, *geometrySource;
-    const char *vv, *ff, *gg;
-
-    vertexSource = loadFile(vert_path, vlen);
-    vv = vertexSource;
-    compileShader("Vertex", vv, GL_VERTEX_SHADER, (GLint&)out.vertex);
-
-    fragmentSource = loadFile(frag_path, flen);
-    ff = fragmentSource;
-    compileShader("Fragment", ff, GL_FRAGMENT_SHADER, (GLint&)out.fragment);
-
-    if (geom_path)
-    {
-        geometrySource = loadFile(geom_path, glen);
-        gg = geometrySource;
-        compileShader("Geometry", gg, GL_GEOMETRY_SHADER, (GLint&)out.geometry);
-    }
-
-    return out;
-}
-
 void attachAndLinkProgram( GLuint program, shaders_t shaders)
 {
     glAttachShader(program, shaders.vertex);
@@ -201,17 +170,7 @@ GLuint createProgram(
     const char *attributeLocations[],
     GLuint numberOfLocations)
 {
-    glslUtility::shaders_t shaders = glslUtility::loadShaders(vertexShaderPath, fragmentShaderPath);
-
-    GLuint program = glCreateProgram();
-
-    for (GLuint i = 0; i < numberOfLocations; ++i)
-    {
-        glBindAttribLocation(program, i, attributeLocations[i]);
-    }
-
-    glslUtility::attachAndLinkProgram(program, shaders);
-
-    return program;
+    // optional path-based loader; not used in this project
+    return 0;
 }
 } // namespace glslUtility
