@@ -252,8 +252,6 @@ For further improvements, I would like to experiment with hierarchical spatial d
 
 ### 🔧 Performance Evaluation
 
-### 🔧 Performance Evaluation
-
 | Feature                                | Configuration                     | Avg ms/frame |
 |----------------------------------------|------------------------------------|--------------:|
 | **Refraction**                         | IOR = 1.5                          | 27.284        |
@@ -287,6 +285,10 @@ These empirical results emphasize that optimization choices are context‑depend
 
 ### Development Process and Early Iterations
 
+<p align="center">
+  <img src="readme/initial.png" />
+  <p align="center"></p>
+
 Developing this path tracer began with a very simple diffuse Cornell box rendered at low iteration counts. The initial images were dark, noisy and lacked any material richness because the shading kernel simply accumulated a single lambertian bounce before terminating. At this stage I verified that camera rays were correctly generated according to the JSON specification and that intersections with spheres and boxes produced expected normals and hit distances. After sorting rays by material type and adding stream compaction, the early renders converged much faster and the output buffer no longer filled with terminated paths. These improvements laid the foundation for the more sophisticated scenes and features described throughout this README.
 
 ### Noise and Convergence Study
@@ -294,6 +296,10 @@ Developing this path tracer began with a very simple diffuse Cornell box rendere
 Monte‑Carlo path tracing is inherently noisy at low sample counts because each pixel accumulates only a handful of random light paths. The image above illustrates the same solar‑system composition rendered with a very small number of iterations. The coloured orbs and walls are barely discernible behind a sea of bright speckles and banding. As more samples are accumulated the variance decreases proportionally to the inverse square root of the iteration count, so doubling the sample count cuts noise by roughly 30 %. This study convinced me of the importance of antialiasing, stratification and direct lighting. Without these techniques the noise floor remains unacceptably high for scenes containing small light sources or high dynamic range. In production workflows a denoiser such as Intel’s Open Image Denoise can be applied to intermediate passes to accelerate convergence even further.
 
 ### Depth‑of‑Field Extremes
+
+<p align="center">
+  <img src="readme/depth_of_field_1.png" width="220"/> <img src="readme/depth_of_field_32.png" width="220"/>
+</p>
 
 One of the strengths of the thin‑lens implementation is the ability to dial in creative blur by varying the lens aperture radius. Setting a relatively large aperture produces a pronounced bokeh effect: foreground and background objects melt into soft blobs while the focal plane stays sharp. This extreme depth of field helps isolate a subject and adds cinematic character, but it also requires more samples because each jittered ray sees a slightly different scene. In practice I found that balancing aperture size and iteration count is essential. Too much blur with too few samples leaves the frame blotchy, whereas a moderate blur at higher sample counts preserves detail and smooths noise.
 
@@ -310,3 +316,10 @@ Beyond technical correctness, rendering is about storytelling. I explored numero
 ## Conclusion
 
 This CUDA path tracer has grown from a simple diffuse Cornell box into a flexible rendering system capable of producing a variety of visually rich scenes. By adding core features like BSDF evaluation, path sorting and stochastic sampling and layering on optional effects such as depth of field, direct lighting and refraction, the renderer achieves realistic global illumination and cinematic control. Throughout the project I learned how light behaves in complex environments, how GPU parallelism can be harnessed to simulate that behaviour efficiently and how careful design of scene descriptions and sampling strategies can make or break the visual result. The accompanying images showcase both the technical achievements and the artistic possibilities unlocked by this work.
+
+## Bloopers
+
+<p align="center">
+  <img src="bloopers/cornell.2025-10-05_00-01-11z.21samp.png" />  <img src="bloopers/cornell.2025-10-05_02-54-09z.94samp.png" />  <img src="bloopers/cornell.2025-10-06_01-01-46z.93samp.png" />  <img src="bloopers/cornell.2025-10-06_03-40-12z.5000samp.png" /> <img src="bloopers/galaxy.2025-10-06_01-43-33z.137samp.png"/>
+  <img src="bloopers/night_interchange.2025-10-07_03-07-39z.4000samp.png" />
+</p>
