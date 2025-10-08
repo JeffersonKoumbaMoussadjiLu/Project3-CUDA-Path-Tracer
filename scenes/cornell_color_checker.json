@@ -1,0 +1,480 @@
+{
+    "Materials": {
+        "light": {
+            "TYPE": "Emitting",
+            "RGB": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "EMITTANCE": 1.5
+        },
+        "diffuse_white": {
+            "TYPE": "Diffuse",
+            "RGB": [
+                0.98,
+                0.98,
+                0.98
+            ]
+        },
+        "diffuse_red": {
+            "TYPE": "Diffuse",
+            "RGB": [
+                0.85,
+                0.35,
+                0.35
+            ]
+        },
+        "diffuse_green": {
+            "TYPE": "Diffuse",
+            "RGB": [
+                0.35,
+                0.85,
+                0.35
+            ]
+        },
+        "specular_white": {
+            "TYPE": "Specular",
+            "RGB": [
+                0.98,
+                0.98,
+                0.98
+            ],
+            "ROUGHNESS": 0.0
+        },
+        "mirror": {
+            "TYPE": "Specular",
+            "RGB": [
+                0.98,
+                0.98,
+                0.98
+            ]
+        },
+        "glass": {
+            "TYPE": "Refractive",
+            "RGB": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "IOR": 1.5
+        },
+        "water": {
+            "TYPE": "Refractive",
+            "RGB": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "IOR": 1.33
+        },
+        "blue_diffuse": {
+            "TYPE": "Diffuse",
+            "RGB": [
+                0.3,
+                0.6,
+                0.95
+            ]
+        },
+        "yellow_diffuse": {
+            "TYPE": "Diffuse",
+            "RGB": [
+                0.95,
+                0.85,
+                0.2
+            ]
+        },
+        "gray_diffuse": {
+            "TYPE": "Diffuse",
+            "RGB": [
+                0.5,
+                0.5,
+                0.5
+            ]
+        },
+        "diffuse_c1": {
+            "TYPE": "Diffuse",
+            "RGB": [
+                1.0,
+                0.4,
+                0.4
+            ]
+        },
+        "diffuse_c2": {
+            "TYPE": "Diffuse",
+            "RGB": [
+                0.4,
+                1.0,
+                0.4
+            ]
+        },
+        "diffuse_c3": {
+            "TYPE": "Diffuse",
+            "RGB": [
+                0.4,
+                0.4,
+                1.0
+            ]
+        },
+        "diffuse_c4": {
+            "TYPE": "Diffuse",
+            "RGB": [
+                1.0,
+                1.0,
+                0.4
+            ]
+        },
+        "diffuse_c5": {
+            "TYPE": "Diffuse",
+            "RGB": [
+                1.0,
+                0.6,
+                1.0
+            ]
+        },
+        "diffuse_c6": {
+            "TYPE": "Diffuse",
+            "RGB": [
+                0.6,
+                1.0,
+                1.0
+            ]
+        },
+        "diffuse_c7": {
+            "TYPE": "Diffuse",
+            "RGB": [
+                1.0,
+                0.7,
+                0.2
+            ]
+        },
+        "diffuse_c8": {
+            "TYPE": "Diffuse",
+            "RGB": [
+                0.2,
+                0.8,
+                0.7
+            ]
+        },
+        "diffuse_c9": {
+            "TYPE": "Diffuse",
+            "RGB": [
+                0.8,
+                0.2,
+                0.9
+            ]
+        }
+    },
+    "Camera": {
+        "RES": [
+            800,
+            800
+        ],
+        "FOVY": 45.0,
+        "ITERATIONS": 3000,
+        "DEPTH": 6,
+        "FILE": "cornell_color_checker",
+        "EYE": [
+            0.0,
+            5.0,
+            10.5
+        ],
+        "LOOKAT": [
+            0.0,
+            5.0,
+            0.0
+        ],
+        "UP": [
+            0.0,
+            1.0,
+            0.0
+        ]
+    },
+    "Objects": [
+        {
+            "TYPE": "cube",
+            "MATERIAL": "light",
+            "TRANS": [
+                0.0,
+                10.0,
+                0.0
+            ],
+            "ROTAT": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "SCALE": [
+                3.0,
+                0.3,
+                3.0
+            ]
+        },
+        {
+            "TYPE": "cube",
+            "MATERIAL": "diffuse_white",
+            "TRANS": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "ROTAT": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "SCALE": [
+                10.0,
+                0.01,
+                10.0
+            ]
+        },
+        {
+            "TYPE": "cube",
+            "MATERIAL": "diffuse_white",
+            "TRANS": [
+                0.0,
+                10.0,
+                0.0
+            ],
+            "ROTAT": [
+                0.0,
+                0.0,
+                90.0
+            ],
+            "SCALE": [
+                0.01,
+                10.0,
+                10.0
+            ]
+        },
+        {
+            "TYPE": "cube",
+            "MATERIAL": "diffuse_white",
+            "TRANS": [
+                0.0,
+                5.0,
+                -5.0
+            ],
+            "ROTAT": [
+                0.0,
+                90.0,
+                0.0
+            ],
+            "SCALE": [
+                0.01,
+                10.0,
+                10.0
+            ]
+        },
+        {
+            "TYPE": "cube",
+            "MATERIAL": "diffuse_red",
+            "TRANS": [
+                -5.0,
+                5.0,
+                0.0
+            ],
+            "ROTAT": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "SCALE": [
+                0.01,
+                10.0,
+                10.0
+            ]
+        },
+        {
+            "TYPE": "cube",
+            "MATERIAL": "diffuse_green",
+            "TRANS": [
+                5.0,
+                5.0,
+                0.0
+            ],
+            "ROTAT": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "SCALE": [
+                0.01,
+                10.0,
+                10.0
+            ]
+        },
+        {
+            "TYPE": "sphere",
+            "MATERIAL": "diffuse_c1",
+            "TRANS": [
+                -3.0,
+                1.0,
+                -3.0
+            ],
+            "ROTAT": [
+                0,
+                0,
+                0
+            ],
+            "SCALE": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        {
+            "TYPE": "sphere",
+            "MATERIAL": "diffuse_c2",
+            "TRANS": [
+                0.0,
+                1.0,
+                -3.0
+            ],
+            "ROTAT": [
+                0,
+                0,
+                0
+            ],
+            "SCALE": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        {
+            "TYPE": "sphere",
+            "MATERIAL": "diffuse_c3",
+            "TRANS": [
+                3.0,
+                1.0,
+                -3.0
+            ],
+            "ROTAT": [
+                0,
+                0,
+                0
+            ],
+            "SCALE": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        {
+            "TYPE": "sphere",
+            "MATERIAL": "diffuse_c4",
+            "TRANS": [
+                -3.0,
+                1.0,
+                0.0
+            ],
+            "ROTAT": [
+                0,
+                0,
+                0
+            ],
+            "SCALE": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        {
+            "TYPE": "sphere",
+            "MATERIAL": "diffuse_c5",
+            "TRANS": [
+                0.0,
+                1.0,
+                0.0
+            ],
+            "ROTAT": [
+                0,
+                0,
+                0
+            ],
+            "SCALE": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        {
+            "TYPE": "sphere",
+            "MATERIAL": "diffuse_c6",
+            "TRANS": [
+                3.0,
+                1.0,
+                0.0
+            ],
+            "ROTAT": [
+                0,
+                0,
+                0
+            ],
+            "SCALE": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        {
+            "TYPE": "sphere",
+            "MATERIAL": "diffuse_c7",
+            "TRANS": [
+                -3.0,
+                1.0,
+                3.0
+            ],
+            "ROTAT": [
+                0,
+                0,
+                0
+            ],
+            "SCALE": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        {
+            "TYPE": "sphere",
+            "MATERIAL": "diffuse_c8",
+            "TRANS": [
+                0.0,
+                1.0,
+                3.0
+            ],
+            "ROTAT": [
+                0,
+                0,
+                0
+            ],
+            "SCALE": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        {
+            "TYPE": "sphere",
+            "MATERIAL": "diffuse_c9",
+            "TRANS": [
+                3.0,
+                1.0,
+                3.0
+            ],
+            "ROTAT": [
+                0,
+                0,
+                0
+            ],
+            "SCALE": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        }
+    ]
+}

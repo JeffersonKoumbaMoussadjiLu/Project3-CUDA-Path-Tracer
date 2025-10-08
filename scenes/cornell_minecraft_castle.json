@@ -1,0 +1,864 @@
+{
+    "Materials": {
+        "light": {
+            "TYPE": "Emitting",
+            "RGB": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "EMITTANCE": 1.5
+        },
+        "diffuse_white": {
+            "TYPE": "Diffuse",
+            "RGB": [
+                0.98,
+                0.98,
+                0.98
+            ]
+        },
+        "diffuse_red": {
+            "TYPE": "Diffuse",
+            "RGB": [
+                0.85,
+                0.35,
+                0.35
+            ]
+        },
+        "diffuse_green": {
+            "TYPE": "Diffuse",
+            "RGB": [
+                0.35,
+                0.85,
+                0.35
+            ]
+        },
+        "specular_white": {
+            "TYPE": "Specular",
+            "RGB": [
+                0.98,
+                0.98,
+                0.98
+            ],
+            "ROUGHNESS": 0.0
+        },
+        "grass": {
+            "TYPE": "Diffuse",
+            "RGB": [
+                0.3,
+                0.7,
+                0.3
+            ]
+        },
+        "stone": {
+            "TYPE": "Diffuse",
+            "RGB": [
+                0.65,
+                0.65,
+                0.65
+            ]
+        },
+        "cobble": {
+            "TYPE": "Diffuse",
+            "RGB": [
+                0.55,
+                0.55,
+                0.55
+            ]
+        },
+        "wood": {
+            "TYPE": "Diffuse",
+            "RGB": [
+                0.6,
+                0.4,
+                0.2
+            ]
+        },
+        "glass": {
+            "TYPE": "Specular",
+            "RGB": [
+                0.98,
+                0.98,
+                0.98
+            ],
+            "ROUGHNESS": 0.0
+        },
+        "torch": {
+            "TYPE": "Emitting",
+            "RGB": [
+                1.0,
+                0.82,
+                0.45
+            ],
+            "EMITTANCE": 2.4
+        }
+    },
+    "Camera": {
+        "RES": [
+            800,
+            800
+        ],
+        "FOVY": 45.0,
+        "ITERATIONS": 2500,
+        "DEPTH": 8,
+        "FILE": "cornell_minecraft_castle",
+        "EYE": [
+            0.0,
+            5.0,
+            10.5
+        ],
+        "LOOKAT": [
+            0.0,
+            3.0,
+            0.0
+        ],
+        "UP": [
+            0.0,
+            1.0,
+            0.0
+        ]
+    },
+    "Objects": [
+        {
+            "TYPE": "cube",
+            "MATERIAL": "light",
+            "TRANS": [
+                0.0,
+                10.0,
+                0.0
+            ],
+            "ROTAT": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "SCALE": [
+                3.0,
+                0.3,
+                3.0
+            ]
+        },
+        {
+            "TYPE": "cube",
+            "MATERIAL": "diffuse_white",
+            "TRANS": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "ROTAT": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "SCALE": [
+                10.0,
+                0.01,
+                10.0
+            ]
+        },
+        {
+            "TYPE": "cube",
+            "MATERIAL": "diffuse_white",
+            "TRANS": [
+                0.0,
+                10.0,
+                0.0
+            ],
+            "ROTAT": [
+                0.0,
+                0.0,
+                90.0
+            ],
+            "SCALE": [
+                0.01,
+                10.0,
+                10.0
+            ]
+        },
+        {
+            "TYPE": "cube",
+            "MATERIAL": "diffuse_white",
+            "TRANS": [
+                0.0,
+                5.0,
+                -5.0
+            ],
+            "ROTAT": [
+                0.0,
+                90.0,
+                0.0
+            ],
+            "SCALE": [
+                0.01,
+                10.0,
+                10.0
+            ]
+        },
+        {
+            "TYPE": "cube",
+            "MATERIAL": "diffuse_red",
+            "TRANS": [
+                -5.0,
+                5.0,
+                0.0
+            ],
+            "ROTAT": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "SCALE": [
+                0.01,
+                10.0,
+                10.0
+            ]
+        },
+        {
+            "TYPE": "cube",
+            "MATERIAL": "diffuse_green",
+            "TRANS": [
+                5.0,
+                5.0,
+                0.0
+            ],
+            "ROTAT": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "SCALE": [
+                0.01,
+                10.0,
+                10.0
+            ]
+        },
+        {
+            "TYPE": "cube",
+            "MATERIAL": "grass",
+            "TRANS": [
+                0.0,
+                0.1,
+                0.0
+            ],
+            "ROTAT": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "SCALE": [
+                4.0,
+                0.1,
+                4.0
+            ]
+        },
+        {
+            "TYPE": "cube",
+            "MATERIAL": "stone",
+            "TRANS": [
+                -2.5,
+                1.6,
+                -2.5
+            ],
+            "ROTAT": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "SCALE": [
+                0.6,
+                1.6,
+                0.6
+            ]
+        },
+        {
+            "TYPE": "cube",
+            "MATERIAL": "cobble",
+            "TRANS": [
+                -2.05,
+                3.45,
+                -2.5
+            ],
+            "ROTAT": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "SCALE": [
+                0.22,
+                0.2,
+                0.22
+            ]
+        },
+        {
+            "TYPE": "cube",
+            "MATERIAL": "cobble",
+            "TRANS": [
+                -2.95,
+                3.45,
+                -2.5
+            ],
+            "ROTAT": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "SCALE": [
+                0.22,
+                0.2,
+                0.22
+            ]
+        },
+        {
+            "TYPE": "cube",
+            "MATERIAL": "cobble",
+            "TRANS": [
+                -2.5,
+                3.45,
+                -2.05
+            ],
+            "ROTAT": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "SCALE": [
+                0.22,
+                0.2,
+                0.22
+            ]
+        },
+        {
+            "TYPE": "cube",
+            "MATERIAL": "cobble",
+            "TRANS": [
+                -2.5,
+                3.45,
+                -2.95
+            ],
+            "ROTAT": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "SCALE": [
+                0.22,
+                0.2,
+                0.22
+            ]
+        },
+        {
+            "TYPE": "cube",
+            "MATERIAL": "stone",
+            "TRANS": [
+                2.5,
+                1.6,
+                -2.5
+            ],
+            "ROTAT": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "SCALE": [
+                0.6,
+                1.6,
+                0.6
+            ]
+        },
+        {
+            "TYPE": "cube",
+            "MATERIAL": "cobble",
+            "TRANS": [
+                2.95,
+                3.45,
+                -2.5
+            ],
+            "ROTAT": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "SCALE": [
+                0.22,
+                0.2,
+                0.22
+            ]
+        },
+        {
+            "TYPE": "cube",
+            "MATERIAL": "cobble",
+            "TRANS": [
+                2.05,
+                3.45,
+                -2.5
+            ],
+            "ROTAT": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "SCALE": [
+                0.22,
+                0.2,
+                0.22
+            ]
+        },
+        {
+            "TYPE": "cube",
+            "MATERIAL": "cobble",
+            "TRANS": [
+                2.5,
+                3.45,
+                -2.05
+            ],
+            "ROTAT": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "SCALE": [
+                0.22,
+                0.2,
+                0.22
+            ]
+        },
+        {
+            "TYPE": "cube",
+            "MATERIAL": "cobble",
+            "TRANS": [
+                2.5,
+                3.45,
+                -2.95
+            ],
+            "ROTAT": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "SCALE": [
+                0.22,
+                0.2,
+                0.22
+            ]
+        },
+        {
+            "TYPE": "cube",
+            "MATERIAL": "stone",
+            "TRANS": [
+                -2.5,
+                1.6,
+                2.5
+            ],
+            "ROTAT": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "SCALE": [
+                0.6,
+                1.6,
+                0.6
+            ]
+        },
+        {
+            "TYPE": "cube",
+            "MATERIAL": "cobble",
+            "TRANS": [
+                -2.05,
+                3.45,
+                2.5
+            ],
+            "ROTAT": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "SCALE": [
+                0.22,
+                0.2,
+                0.22
+            ]
+        },
+        {
+            "TYPE": "cube",
+            "MATERIAL": "cobble",
+            "TRANS": [
+                -2.95,
+                3.45,
+                2.5
+            ],
+            "ROTAT": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "SCALE": [
+                0.22,
+                0.2,
+                0.22
+            ]
+        },
+        {
+            "TYPE": "cube",
+            "MATERIAL": "cobble",
+            "TRANS": [
+                -2.5,
+                3.45,
+                2.95
+            ],
+            "ROTAT": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "SCALE": [
+                0.22,
+                0.2,
+                0.22
+            ]
+        },
+        {
+            "TYPE": "cube",
+            "MATERIAL": "cobble",
+            "TRANS": [
+                -2.5,
+                3.45,
+                2.05
+            ],
+            "ROTAT": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "SCALE": [
+                0.22,
+                0.2,
+                0.22
+            ]
+        },
+        {
+            "TYPE": "cube",
+            "MATERIAL": "stone",
+            "TRANS": [
+                2.5,
+                1.6,
+                2.5
+            ],
+            "ROTAT": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "SCALE": [
+                0.6,
+                1.6,
+                0.6
+            ]
+        },
+        {
+            "TYPE": "cube",
+            "MATERIAL": "cobble",
+            "TRANS": [
+                2.95,
+                3.45,
+                2.5
+            ],
+            "ROTAT": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "SCALE": [
+                0.22,
+                0.2,
+                0.22
+            ]
+        },
+        {
+            "TYPE": "cube",
+            "MATERIAL": "cobble",
+            "TRANS": [
+                2.05,
+                3.45,
+                2.5
+            ],
+            "ROTAT": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "SCALE": [
+                0.22,
+                0.2,
+                0.22
+            ]
+        },
+        {
+            "TYPE": "cube",
+            "MATERIAL": "cobble",
+            "TRANS": [
+                2.5,
+                3.45,
+                2.95
+            ],
+            "ROTAT": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "SCALE": [
+                0.22,
+                0.2,
+                0.22
+            ]
+        },
+        {
+            "TYPE": "cube",
+            "MATERIAL": "cobble",
+            "TRANS": [
+                2.5,
+                3.45,
+                2.05
+            ],
+            "ROTAT": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "SCALE": [
+                0.22,
+                0.2,
+                0.22
+            ]
+        },
+        {
+            "TYPE": "cube",
+            "MATERIAL": "stone",
+            "TRANS": [
+                0.0,
+                1.0,
+                -2.5
+            ],
+            "ROTAT": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "SCALE": [
+                2.5,
+                0.35,
+                0.3
+            ]
+        },
+        {
+            "TYPE": "cube",
+            "MATERIAL": "stone",
+            "TRANS": [
+                -2.5,
+                1.0,
+                0.0
+            ],
+            "ROTAT": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "SCALE": [
+                0.3,
+                0.35,
+                2.5
+            ]
+        },
+        {
+            "TYPE": "cube",
+            "MATERIAL": "stone",
+            "TRANS": [
+                2.5,
+                1.0,
+                0.0
+            ],
+            "ROTAT": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "SCALE": [
+                0.3,
+                0.35,
+                2.5
+            ]
+        },
+        {
+            "TYPE": "cube",
+            "MATERIAL": "stone",
+            "TRANS": [
+                -1.9,
+                1.0,
+                2.5
+            ],
+            "ROTAT": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "SCALE": [
+                1.1,
+                0.35,
+                0.3
+            ]
+        },
+        {
+            "TYPE": "cube",
+            "MATERIAL": "stone",
+            "TRANS": [
+                1.9,
+                1.0,
+                2.5
+            ],
+            "ROTAT": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "SCALE": [
+                1.1,
+                0.35,
+                0.3
+            ]
+        },
+        {
+            "TYPE": "cube",
+            "MATERIAL": "wood",
+            "TRANS": [
+                0.0,
+                0.9,
+                2.4
+            ],
+            "ROTAT": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "SCALE": [
+                0.6,
+                0.9,
+                0.15
+            ]
+        },
+        {
+            "TYPE": "cube",
+            "MATERIAL": "stone",
+            "TRANS": [
+                0.0,
+                1.2,
+                0.0
+            ],
+            "ROTAT": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "SCALE": [
+                1.1,
+                1.2,
+                1.1
+            ]
+        },
+        {
+            "TYPE": "cube",
+            "MATERIAL": "cobble",
+            "TRANS": [
+                0.0,
+                2.7,
+                0.0
+            ],
+            "ROTAT": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "SCALE": [
+                1.2,
+                0.2,
+                1.2
+            ]
+        },
+        {
+            "TYPE": "cube",
+            "MATERIAL": "glass",
+            "TRANS": [
+                -2.5,
+                1.2,
+                0.0
+            ],
+            "ROTAT": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "SCALE": [
+                0.05,
+                0.2,
+                0.25
+            ]
+        },
+        {
+            "TYPE": "cube",
+            "MATERIAL": "glass",
+            "TRANS": [
+                2.5,
+                1.2,
+                0.0
+            ],
+            "ROTAT": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "SCALE": [
+                0.05,
+                0.2,
+                0.25
+            ]
+        },
+        {
+            "TYPE": "cube",
+            "MATERIAL": "torch",
+            "TRANS": [
+                -0.9,
+                1.5,
+                2.2
+            ],
+            "ROTAT": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "SCALE": [
+                0.08,
+                0.16,
+                0.08
+            ]
+        },
+        {
+            "TYPE": "cube",
+            "MATERIAL": "torch",
+            "TRANS": [
+                0.9,
+                1.5,
+                2.2
+            ],
+            "ROTAT": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "SCALE": [
+                0.08,
+                0.16,
+                0.08
+            ]
+        }
+    ]
+}
